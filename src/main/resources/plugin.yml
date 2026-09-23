@@ -1,0 +1,32 @@
+name: StrikesSTG
+version: ${version}
+main: com.strikesstg.StrikesSTG
+api-version: "1.21"
+description: Strike players for swearing in chat, signs, and books.
+author: StrikesSTG
+commands:
+  strikes:
+    description: View your strikes, another player's strikes, or reset strikes.
+    usage: /strikes [player] | /strikes reset <player>
+    permission: strikesstg.strikes
+permissions:
+  strikesstg.strikes:
+    description: View your own strikes.
+    default: true
+  strikesstg.strikes.others:
+    description: View another player's strikes.
+    default: op
+  strikesstg.reset:
+    description: Reset a player's strikes.
+    default: op
+  strikesstg.bypass:
+    description: Bypass swear detection.
+    default: false
+  strikesstg.admin:
+    description: All StrikesSTG admin permissions.
+    default: op
+    children:
+      strikesstg.strikes: true
+      strikesstg.strikes.others: true
+      strikesstg.reset: true
+      strikesstg.bypass: true
