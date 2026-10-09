@@ -8,14 +8,15 @@ Paper plugin that strikes players for swearing in chat, signs, and books.
 
 Separate builds live under `versions/`:
 
-| Folder | Paper API | `api-version` | Notes |
-|--------|-----------|---------------|--------|
-| `versions/26.1` | `26.1.1.build.29-alpha` | `26.1` | Paper has no bare `26.1` API artifact; this targets the 26.1.1 line |
-| `versions/26.1.2` | `26.1.2.build.74-stable` | `26.1` | |
-| `versions/26.2` | `26.2.build.132-stable` | `26.2` | |
-| `versions/26.3` | `26.3.build.168-beta` | `26.3` | |
+| Folder | Paper API | `api-version` | Java |
+|--------|-----------|---------------|------|
+| `versions/1.21.11` | `1.21.11-R0.1-SNAPSHOT` | `1.21` | 21+ |
+| `versions/26.1` | `26.1.1.build.29-alpha` | `26.1` | 25+ |
+| `versions/26.1.2` | `26.1.2.build.74-stable` | `26.1` | 25+ |
+| `versions/26.2` | `26.2.build.132-stable` | `26.2` | 25+ |
+| `versions/26.3` | `26.3.build.168-beta` | `26.3` | 25+ |
 
-Requires **Java 25+** on the server (and to build).
+Note: Paper has no bare `26.1` API artifact; that folder targets the 26.1.1 line.
 
 ## Build all
 
@@ -25,6 +26,7 @@ Requires **Java 25+** on the server (and to build).
 
 Jars:
 
+- `versions/1.21.11/build/libs/StrikesSTG-1.1.0-1.21.11.jar`
 - `versions/26.1/build/libs/StrikesSTG-1.1.0-26.1.jar`
 - `versions/26.1.2/build/libs/StrikesSTG-1.1.0-26.1.2.jar`
 - `versions/26.2/build/libs/StrikesSTG-1.1.0-26.2.jar`
@@ -33,7 +35,7 @@ Jars:
 Build one version:
 
 ```bash
-./gradlew :26.2:build
+./gradlew :1.21.11:build
 ```
 
 ## Features
