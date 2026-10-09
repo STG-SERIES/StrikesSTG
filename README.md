@@ -1,8 +1,40 @@
 # StrikesSTG
 
-Paper plugin for Minecraft **1.21.11** that strikes players for swearing in chat, signs, and books.
+Paper plugin that strikes players for swearing in chat, signs, and books.
 
 **License:** [MIT](LICENSE)
+
+## Supported versions
+
+Separate builds live under `versions/`:
+
+| Folder | Paper API | `api-version` | Notes |
+|--------|-----------|---------------|--------|
+| `versions/26.1` | `26.1.1.build.29-alpha` | `26.1` | Paper has no bare `26.1` API artifact; this targets the 26.1.1 line |
+| `versions/26.1.2` | `26.1.2.build.74-stable` | `26.1` | |
+| `versions/26.2` | `26.2.build.132-stable` | `26.2` | |
+| `versions/26.3` | `26.3.build.168-beta` | `26.3` | |
+
+Requires **Java 25+** on the server (and to build).
+
+## Build all
+
+```bash
+./gradlew buildAll
+```
+
+Jars:
+
+- `versions/26.1/build/libs/StrikesSTG-1.1.0-26.1.jar`
+- `versions/26.1.2/build/libs/StrikesSTG-1.1.0-26.1.2.jar`
+- `versions/26.2/build/libs/StrikesSTG-1.1.0-26.2.jar`
+- `versions/26.3/build/libs/StrikesSTG-1.1.0-26.3.jar`
+
+Build one version:
+
+```bash
+./gradlew :26.2:build
+```
 
 ## Features
 
@@ -15,20 +47,11 @@ Paper plugin for Minecraft **1.21.11** that strikes players for swearing in chat
 - Console logging for strikes and bans
 - Commands and bypass permission
 
-## Build
-
-```bash
-./gradlew build
-```
-
-Jar output: `build/libs/StrikesSTG-1.0.0.jar`
-
 ## Install
 
-1. Put the jar in your Paper `plugins/` folder
-2. Start the server once to generate `config.yml`
-3. Edit banned words and ban thresholds
-4. `/reload` is not recommended — restart the server after config changes
+1. Download the jar matching your Paper version
+2. Put it in `plugins/`
+3. Restart and edit `config.yml`
 
 ## Commands
 

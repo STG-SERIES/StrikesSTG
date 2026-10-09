@@ -1,0 +1,36 @@
+# StrikesSTG configuration
+
+# Whole words only (case-insensitive). "classic" will NOT match "ass".
+banned-words:
+  - fuck
+  - shit
+  - bitch
+  - asshole
+  - damn
+
+# Applied when a player's total strikes cross each threshold.
+# duration formats: forever | <number>d | <number>h | <number>m
+# Example: 7d = 7 days, 12h = 12 hours, 30m = 30 minutes
+ban-thresholds:
+  - strikes: 3
+    duration: 1d
+  - strikes: 5
+    duration: forever
+
+# Shown as a vanilla title on screen when strikes are added.
+strike-title: "You got %count% strike%plural%!"
+strike-subtitle: ""
+
+# Ban kick / ban list reason
+ban-reason: "You reached %strikes% strikes for swearing."
+
+messages:
+  no-permission: "<red>You don't have permission to do that."
+  player-not-found: "<red>Player not found."
+  usage: "<yellow>Usage: /strikes [player] | /strikes reset <player>"
+  none: "<green>You have no strikes."
+  none-other: "<green>%player% has no strikes."
+  header: "<gold>Strikes for %player%: <white>%count%"
+  entry: "<gray>#%index% <white>%reason% <dark_gray>(%when%)"
+  reset: "<green>Reset strikes for %player%."
+  reset-notify: "<yellow>Your strikes have been reset by an admin."
